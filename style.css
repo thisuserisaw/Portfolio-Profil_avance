@@ -1,0 +1,137 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    color: #333; 
+}
+
+/* En-tête principal */
+h1 {
+    text-align: center;
+    color: #2c3e50; 
+    margin: 20px 0;
+}
+
+/* Styles des sections */
+section {
+    background-color: #ffffff; 
+    border: 1px solid #dcdcdc; 
+    border-radius: 5px; 
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styles des titres de section */
+h2 {
+    color: #2980b9; 
+    border-bottom: 2px solid #2980b9; 
+    padding-bottom: 5px;
+}
+
+/* Style de l'image de profil */
+.profile-image {
+    width: 150px; 
+    height: auto; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 10px auto; 
+    border: 2px solid #2980b9; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Styles du tableau */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    text-align: left; 
+}
+
+th {
+    background-color: #2980b9; 
+    color: white; 
+}
+
+/* Styles des boutons */
+button {
+    background-color: #2980b9; 
+    color: white; 
+    border: none;
+    border-radius: 3px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    display: block; 
+    margin: 10px auto; 
+}
+
+button:hover {
+    background-color: #1a5276; 
+}
+
+/* Styles pour le formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column; 
+}
+
+label {
+    margin-top: 10px; 
+}
+
+/* Styles des champs du formulaire */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 3px; 
+    margin-top: 5px; 
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        padding: 15px; /* Réduction du padding pour les petits écrans */
+    }
+
+    button {
+        width: 100%; /* Bouton pleine largeur sur les petits écrans */
+    }
+
+    .profile-image {
+        width: 120px; /* Ajustement de la largeur pour les petits écrans */
+    }
+}
+/* Styles du footer */
+footer {
+    background-color: #2980b9; 
+    color: white; 
+    text-align: center; 
+    padding: 15px 0; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+footer p {
+    margin: 5px 0; 
+}
+
+footer .social-links a {
+    color: white; 
+    text-decoration: none; 
+}
+
+footer .social-links a:hover {
+    text-decoration: underline; 
+}

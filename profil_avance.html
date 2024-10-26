@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hafsa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+     <h1>BENALI HAFSA</h1>   
+    </header>
+    <!--À propos de moi-->
+    <section>
+        <h2>À propos de moi</h2>
+        <img src="profil.jpeg" alt="Hafsa" class="profile-image">
+        <p>
+            Je suis actuellement en première année de cycle ingénieur en ingénierie informatique et réseaux. Avant d’intégrer ce cycle, j’ai passé deux années en BTS en Développement des Systèmes d'Information (DSI), ce qui m’a permis d’acquérir des bases solides en informatique, tant sur le plan théorique que pratique. Mon parcours m’a ainsi préparé aux défis techniques de mon cursus actuel, et je suis motivé à approfondir mes compétences pour exceller dans ce domaine.
+        </p>
+    </section>
+    <!--Expérience professionnelle-->
+    <section>
+        <h2>Expériences professionnelles</h2>
+        <ul>
+            <!-- Stage de 1ère année -->
+            <li>
+                <strong>Stage en 1ère année</strong> - Juin 2023<br>
+                Entreprise : Analyli Consulting<br>
+                
+            </li>
+    
+            <!-- Stage de 2ème année -->
+            <li>
+                <strong>Stage en 2ème année</strong> - Juin 2024<br>
+                Entreprise : M2M Group<br>
+               
+            </li>
+        </ul>
+    </section>
+    <!-- Compétences -->
+    <section>
+        <h2>Compétences professionnelles</h2>
+        <ul>
+            <li>Développement de logiciels : Expérience avec des langages de programmation comme Java,VB.NET,C,JS...</li>
+            <li>Gestion de bases de données : Expérience avec SQL, pour la conception et la gestion de bases de données.</li>
+            <li>Analyse de données : Capacité à analyser et interpréter des données pour des solutions de prise de décision.</li>
+        </ul>
+    </section>
+    <!-- Section Hobbies -->
+<section>
+    <h2>Hobbies & Objectifs</h2>
+    <h4>Hobbies</h4>
+    <ul>
+        <li>Programmation et développement de projets personnels.</li>
+        <li>Voyages et découverte de nouvelles cultures.</li>
+        <li>Sport, notamment le football et Formula 1.</li>
+    </ul>
+    <h4>Objectifs</h4>
+    <ol>
+        <li>**Améliorer mes compétences en développement web et en programmation avancée.**</li>
+        <li>**Améliorer ma gestion du temps et des priorités.** </li>
+        <li>**Travailler mon esprit critique et ma capacité de résolution de problèmes.**</li>
+    </ol>
+</section>
+<!--Section d'amis-->
+<section>
+    <h2>Amis</h2>
+    <table border 1>
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Ville</th>
+            <th>Profil</th>
+        </tr>
+        <tr>
+            <td>Shaymae</td>
+            <td>20</td>
+            <td>Casablanca</td>
+            <td><a href="https://www.instagram.com/shaayma.e/" target="_blank">Voir le profil</a></td>
+        </tr>
+        <tr>
+            <td>Kawtar</td>
+            <td>20</td>
+            <td>China</td>
+            <td><a href="https://www.instagram.com/dhampir_kavalfa/" target="_blank">Voir le profil</a></td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>21</td>
+            <td>Casablanca</td>
+            <td><a href="https://www.instagram.com/murky19_/" target="_blank">Voir le profil</a></td>
+        </tr>
+        </tr>
+    </table>
+</section>
+<!--Formulaire-->
+<section>
+    <h2>Contact</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Soumettre</button>
+    </form>
+</section>
+<!--js form-->
+<script>
+    function validateForm(event) {
+    // Empêche la soumission du formulaire immédiatement
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name.trim() === '') {
+        Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez entrer votre nom.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        return; // Stoppe la fonction ici si une erreur est présente
+    }
+
+    if (!emailPattern.test(email)) {
+        Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez entrer un email valide.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        return; // Stoppe la fonction ici si une erreur est présente
+    }
+
+    // Si aucune erreur n’est trouvée, affiche une alerte de succès
+    Swal.fire({
+        title: 'Formulaire soumis avec succès !',
+        text: 'Merci pour votre message !',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        // Soumet le formulaire seulement après confirmation
+        document.getElementById('contactForm').submit();
+    });
+}
+
+// Associe la fonction validateForm au formulaire avec l’événement submit
+document.getElementById('contactForm').addEventListener('submit', validateForm);
+
+
+</script>
+
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2024 BENALI HAFSA. Tous droits réservés.</p>
+    <p>Contact : <a href="mailto:hafsa.benali04@gmail.com">hafsa.benali04@gmail.com</a></p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/hafsa-benali-016b3b286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/benalihafsa" target="_blank">GitHub</a>
+    </div>
+</footer>
+</body>
+</html>
